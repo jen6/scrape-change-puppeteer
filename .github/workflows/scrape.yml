@@ -15,7 +15,7 @@ jobs:
       - name: Install
         uses: ianwalter/puppeteer@v2.0.0
         with:
-          args: npm install; node index.js https://developer.apple.com/documentation/storekit/skadnetwork .main
+          entrypoint: ./run.sh
                     #    - name: Fetch latest data
                     #      run: |-
                     #        curl https://www.fire.ca.gov/umbraco/Api/IncidentApi/GetIncidents | jq . > incidents.json
