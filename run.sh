@@ -1,4 +1,5 @@
 #!/bin/sh
+yarn
 cat ./document_list.csv | while read line
 do
   NAME=$(echo $line | awk '{print $1}')
