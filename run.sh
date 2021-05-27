@@ -1,5 +1,6 @@
 #!/bin/sh
-cat document_list.csv | while read line
+ls
+cat ./document_list.csv | while read line
 do
   NAME=$(echo $line | awk '{print $1}')
   URL=$(echo $line | awk '{print $2}')
