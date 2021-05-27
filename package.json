@@ -1,0 +1,13 @@
+{
+  "name": "scrap-change",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "jen6 <fjen6b@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.9",
+    "jest": "^27.0.1",
+    "puppeteer": "^9.1.1",
+    "turndown": "^7.0.0"
+  }
+}
