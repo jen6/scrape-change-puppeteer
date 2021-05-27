@@ -1,5 +1,5 @@
 #!/bin/sh
-yarn
+npm install
 cat ./document_list.csv | while read line
 do
   NAME=$(echo $line | awk '{print $1}')
