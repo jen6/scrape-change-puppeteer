@@ -6,6 +6,6 @@ do
   URL=$(echo $line | awk '{print $2}')
   QUERY=$(echo $line | awk '{print $3}')
   echo "$NAME"
-  node src/app.js "${URL}" "${QUERY}" > documents/"${NAME}".md
+  node index.js "${URL}" "${QUERY}" > documents/"${NAME}".md
 done
 
