@@ -22,6 +22,7 @@ jobs:
     - name: install command
       run: yarn install
     - name: run
+      shell: bash
       run: ./run.sh
     - name: Commit and push if it changed
       run: |-
