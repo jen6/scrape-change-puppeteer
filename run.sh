@@ -1,3 +1,3 @@
 #!/bin/sh
-npm install
+yarn
 node index.js https://developer.apple.com/documentation/storekit/skadnetwork .main
