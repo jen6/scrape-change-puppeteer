@@ -15,16 +15,20 @@ var turndownService = new TurndownService();
       `--no-sandbox`,
       `--disable-setuid-sandbox`,
     ],
-    slowMo: 50
+    slowMo: 50,
+    devtools: true,
+    ignoreHTTPSErrors: true,
+    defaultViewport: {
+      width: 375,
+      height: 667,
+      isMobile: true,
+    }
   });
 
   // 새로운 페이지를 연다.
   const page = await browser.newPage();
   // 페이지의 크기를 설정한다.
-  await page.setViewport({
-    width: 1366,
-    height: 768
-  });
+  await page.setUserAgent("Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/78.0.1025.133 Mobile Safari/535.19")
 
   let argv = process.argv.slice(2)
   let url = argv[0]
