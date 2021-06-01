@@ -16,7 +16,6 @@ var turndownService = new TurndownService();
       `--disable-setuid-sandbox`,
     ],
     slowMo: 50,
-    devtools: true,
     ignoreHTTPSErrors: true,
     defaultViewport: {
       width: 375,
