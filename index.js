@@ -24,24 +24,23 @@ var turndownService = new TurndownService();
     }
   });
 
-  // 새로운 페이지를 연다.
+  const iPhone = puppeteer.devices['iPhone 6'];
   const page = await browser.newPage();
-  // 페이지의 크기를 설정한다.
-  await page.setUserAgent("Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/78.0.1025.133 Mobile Safari/535.19")
+  await page.emulate(iPhone)
 
   let argv = process.argv.slice(2)
   let url = argv[0]
   let jquery_selector = argv[1]
 
   await page.goto(url,{waitUntil: 'networkidle0'});
-  // 페이지의 HTML을 가져온다.
   const content = await page.content();
-  // $에 cheerio를 로드한다.
+
   const $ = cheerio.load(content);
-  // 복사한 리스트의 Selector로 리스트를 모두 가져온다.
-  const contentHtml = $(jquery_selector).html();
-  // 모든 리스트를 순환한다.
+  var contentHtml = $(jquery_selector).html();
+
+  if (contentHtml === null){
+    contentHtml = "no content"
+  }
   console.log(turndownService.turndown(contentHtml));
-  // 브라우저를 종료한다.
   browser.close();
 })();
