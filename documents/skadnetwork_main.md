@@ -39,7 +39,7 @@ The ad network API helps advertisers measure the success of ad campaigns while m
 *   _Advertised apps_ that appear in the signed ads
     
 
-Ad networks must register with Apple, and developers must configure their apps to work with ad networks. For information about set up, see [Registering an Ad Network](/documentation/storekit/skadnetwork/registering_an_ad_network), and [Configuring the Participating Apps](/documentation/storekit/skadnetwork/configuring_the_participating_apps).
+Ad networks must register with Apple, and developers must configure their apps to work with ad networks. For information about set up, see [Registering an Ad Network](/documentation/storekit/skadnetwork/registering_an_ad_network), [Configuring a Source App](/documentation/storekit/skadnetwork/configuring_a_source_app), and [Configuring an Advertised App](/documentation/storekit/skadnetwork/configuring_an_advertised_app).
 
 The following diagram describes the path of an install validation for a StoreKit-rendered ad. App A is the source app that displays an ad. App B is the advertised app that the user installs.
 
@@ -54,7 +54,9 @@ Starting in iOS 14.6, devices send install-validation postbacks to multiple ad n
 *   Up to five other ad networks receive a postback with a `did-win` parameter value of `false` if their ad impressions qualified for the attribution, but didn’t win.
     
 
-For more information about receiving attribution, see [Receiving Ad Attributions and Postbacks](/documentation/storekit/skadnetwork/receiving_ad_attributions_and_postbacks).
+Starting in iOS 15, developers of advertised apps can opt-in to get copies of the winning postbacks that represent successful ad conversions for their app. To opt-in, configure a postback URL in your app. For more information see [Configuring an Advertised App](/documentation/storekit/skadnetwork/configuring_an_advertised_app).
+
+For more information about receiving attribution, including time-window details and other constraints, see [Receiving Ad Attributions and Postbacks](/documentation/storekit/skadnetwork/receiving_ad_attributions_and_postbacks).
 
 The information in the postback that’s cryptographically signed by Apple includes the campaign ID, but doesn’t include user- or device-specific data. The postback may include a conversion value and the source app’s ID if Apple determines that providing the values meets Apple’s privacy threshold. Starting with SKAdNetwork version 3.0, postbacks include a `did-win` flag to indicate whether the ad network won the attribution. For more information about postbacks, see [Verifying an Install-Validation Postback](/documentation/storekit/skadnetwork/verifying_an_install-validation_postback).
 
@@ -64,7 +66,7 @@ Each participant has specific responsibilities when using the ad network APIs to
 
 The ad network’s responsibilities are to:
 
-1.  Register and provide its ad network ID to developers. See [Registering an Ad Network](/documentation/storekit/skadnetwork/registering_an_ad_network).
+1.  Register and provide its ad network identifier to developers. See [Registering an Ad Network](/documentation/storekit/skadnetwork/registering_an_ad_network).
     
 2.  Provide signed ads to the source app. See [Signing and Providing Ads](/documentation/storekit/skadnetwork/signing_and_providing_ads).
     
@@ -75,7 +77,7 @@ The ad network’s responsibilities are to:
 
 The source app’s responsibilities are to:
 
-1.  Add the ad network’s ID to its `Info.plist`. See [Configuring the Participating Apps](/documentation/storekit/skadnetwork/configuring_the_participating_apps).
+1.  Add the ad network identifiers to its `Info.plist`. See [Configuring a Source App](/documentation/storekit/skadnetwork/configuring_a_source_app).
     
 2.  Display ads that the ad network signs. See [Signing and Providing Ads](/documentation/storekit/skadnetwork/signing_and_providing_ads).
     
@@ -86,8 +88,8 @@ The advertised app’s responsibilities are to:
     
 2.  Optionally, update a conversion value by calling [`updateConversionValue(_:)`](/documentation/storekit/skadnetwork/3566697-updateconversionvalue).
     
-
-The device automatically sends install-validation postbacks after a timer for updating conversion values expires. For more information about ad attribution time windows, see [Receiving Ad Attributions and Postbacks](/documentation/storekit/skadnetwork/receiving_ad_attributions_and_postbacks).
+3.  Optionally, specify a server URL in its `Info.plist` to receive a copy of the winning install-validation postback. See [Configuring an Advertised App](/documentation/storekit/skadnetwork/configuring_an_advertised_app).
+    
 
 SKAdNetwork APIs are designed to maintain user privacy. Apps don’t need to use [App Tracking Transparency](/documentation/apptrackingtransparency) before calling SKAdNetwork APIs, and can call these APIs regardless of their tracking authorization status. For more information about privacy, see [User Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
 
@@ -100,45 +102,73 @@ Topics
 
 ### Essentials
 
-[ArticleSigning and Providing Ads](/documentation/storekit/skadnetwork/signing_and_providing_ads)
+[
+
+Signing and Providing Ads](/documentation/storekit/skadnetwork/signing_and_providing_ads)
 
 Advertise apps by signing and providing StoreKit-rendered ads or view-through ads.
 
-[ArticleReceiving Ad Attributions and Postbacks](/documentation/storekit/skadnetwork/receiving_ad_attributions_and_postbacks)
+[
+
+Receiving Ad Attributions and Postbacks](/documentation/storekit/skadnetwork/receiving_ad_attributions_and_postbacks)
 
 Learn about timeframes and priorities for ad impressions that result in ad attributions, and how additional impressions qualify for postbacks.
 
-[ArticleSKAdNetwork Release Notes](/documentation/storekit/skadnetwork/skadnetwork_release_notes)
+[
+
+SKAdNetwork Release Notes](/documentation/storekit/skadnetwork/skadnetwork_release_notes)
 
 Learn about the features in each SKAdNetwork version.
 
 ### Registering Ad Networks and Configuring Apps
 
-[ArticleRegistering an Ad Network](/documentation/storekit/skadnetwork/registering_an_ad_network)
+[
 
-Register your ad network with Apple to use the install validation APIs for your ad campaigns.
+Registering an Ad Network](/documentation/storekit/skadnetwork/registering_an_ad_network)
 
-[ArticleConfiguring the Participating Apps](/documentation/storekit/skadnetwork/configuring_the_participating_apps)
+Register your ad network with Apple to use the install-validation APIs for your ad campaigns.
 
-Configure a source app and prepare an advertised app to participate in ad campaigns.
+[
+
+Configuring a Source App](/documentation/storekit/skadnetwork/configuring_a_source_app)
+
+Configure a source app to participate in ad campaigns.
+
+[
+
+Configuring an Advertised App](/documentation/storekit/skadnetwork/configuring_an_advertised_app)
+
+Prepare an advertised app to participate in ad campaigns.
 
 [`property list key SKAdNetworkItems`](/documentation/bundleresources/information_property_list/skadnetworkitems)
 
 An array of dictionaries containing a list of ad network identifiers.
 
+[`property list key NSAdvertisingAttributionReportEndpoint`](/documentation/bundleresources/information_property_list/nsadvertisingattributionreportendpoint)
+
+The URL where Private Click Measurement and SKAdNetwork send attribution information.
+
 ### Signing StoreKit-Rendered Ads
 
-[ArticleGenerating the Signature to Validate StoreKit-Rendered Ads](/documentation/storekit/skadnetwork/generating_the_signature_to_validate_storekit-rendered_ads)
+[
+
+Generating the Signature to Validate StoreKit-Rendered Ads](/documentation/storekit/skadnetwork/generating_the_signature_to_validate_storekit-rendered_ads)
 
 Initiate install validation by displaying a StoreKit-rendered ad with signed parameters.
 
-[API ReferenceAd Network Install-Validation Keys](/documentation/storekit/skadnetwork/ad_network_install-validation_keys)
+[
+
+API Reference
+
+Ad Network Install-Validation Keys](/documentation/storekit/skadnetwork/ad_network_install-validation_keys)
 
 Specify key values that validate and associate an app installation with an ad campaign.
 
 ### Signing View-Through Ads
 
-[ArticleGenerating the Signature to Validate View-Through Ads](/documentation/storekit/skadnetwork/generating_the_signature_to_validate_view-through_ads)
+[
+
+Generating the Signature to Validate View-Through Ads](/documentation/storekit/skadnetwork/generating_the_signature_to_validate_view-through_ads)
 
 Initiate install validation by displaying a view-through ad with signed parameters.
 
@@ -166,13 +196,17 @@ Updates the conversion value and verifies the first launch of an app installed a
 
 ### Verifying Postbacks
 
-[ArticleVerifying an Install-Validation Postback](/documentation/storekit/skadnetwork/verifying_an_install-validation_postback)
+[
+
+Verifying an Install-Validation Postback](/documentation/storekit/skadnetwork/verifying_an_install-validation_postback)
 
 Verify that a postback you receive after an ad conversion is cryptographically signed by Apple.
 
 ### Testing Ad Attributions
 
-[ArticleDownloading a Testing Profile](/documentation/storekit/skadnetwork/downloading_a_testing_profile)
+[
+
+Downloading a Testing Profile](/documentation/storekit/skadnetwork/downloading_a_testing_profile)
 
 Reduce the time window for ad attributions by downloading a testing profile.
 

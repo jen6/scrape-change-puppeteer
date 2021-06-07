@@ -24,11 +24,17 @@ Users of Apple Search Ads Campaign Management API 3 can continue to use key and 
 This implementation process guides you through the following steps:
 
 *   Invite users with API permissions.
+    
 *   Generate a private-public key pair.
+    
 *   Extract a public key from your persisted private key.
+    
 *   Upload a public key.
+    
 *   Create a client secret.
+    
 *   Request an access token.
+    
 
 ### Invite Users
 
@@ -366,10 +372,14 @@ See Also
 
 ### Essentials
 
-[ArticleCall the Apple Search Ads API](/documentation/apple_search_ads/call_the_apple_search_ads_api)
+[
+
+Call the Apple Search Ads API](/documentation/apple_search_ads/call_the_apple_search_ads_api)
 
 Pass your access token in the authorization header of HTTP requests.
 
-[ArticleUsing Apple Search Ads API Functionality](/documentation/apple_search_ads/using_apple_search_ads_api_functionality)
+[
+
+Using Apple Search Ads API Functionality](/documentation/apple_search_ads/using_apple_search_ads_api_functionality)
 
 Call endpoints using CRUD methods.
