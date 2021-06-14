@@ -7,7 +7,7 @@
 *   [245 (품절)](javascript:void(0))
 *   [250](javascript:void(0))
 *   [255 (품절)](javascript:void(0))
-*   [260](javascript:void(0))
+*   [260 (품절)](javascript:void(0))
 *   [265 (품절)](javascript:void(0))
 *   [270 (품절)](javascript:void(0))
 *   [275 (품절)](javascript:void(0))
