@@ -206,9 +206,9 @@ Verify that a postback you receive after an ad conversion is cryptographically s
 
 [
 
-Downloading a Testing Profile](/documentation/storekit/skadnetwork/downloading_a_testing_profile)
+Testing Ad Attributions with a Downloaded Profile](/documentation/storekit/skadnetwork/testing_ad_attributions_with_a_downloaded_profile)
 
-Reduce the time window for ad attributions by downloading a testing profile.
+Reduce the time window for ad attributions and inspect postbacks using a proxy during testing.
 
 Relationships
 -------------
