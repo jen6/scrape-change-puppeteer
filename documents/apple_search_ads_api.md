@@ -17,9 +17,9 @@ On This Page
 Overview
 --------
 
-With OAuth 2, Apple Search Ads Campaign Management API users authenticate with credentials in exchange for an access token to make authenticated requests to Apple Search Ads API. OAuth 2 replaces key and certificate credentials authentication in previous versions of the API. An immediate advantage of updating the API and using OAuth 2 is the ability to manage access to accounts without requiring or sharing user login and password credentials.
+With OAuth 2, Apple Search Ads Campaign Management API users authenticate with credentials in exchange for an access token to make authenticated requests to Apple Search Ads API. OAuth 2 replaces key and certificate credentials authentication in previous versions of the API. Users of Apple Search Ads Campaign Management API 3 can continue to use key and certificate credentials until their certificates expire. You can’t generate new certificates for API 3.
 
-Users of Apple Search Ads Campaign Management API 3 can continue to use key and certificate credentials, or can upgrade the API and migrate to OAuth 2.
+An immediate advantage of updating the API and using OAuth 2 is the ability to manage access to accounts without requiring or sharing user login and password credentials.
 
 This implementation process guides you through the following steps:
 
@@ -38,7 +38,7 @@ This implementation process guides you through the following steps:
 
 ### Invite Users
 
-API administrators invite users with API permissions using the following process:
+Account administrators invite users with API permissions using the following process:
 
 1.  From the [Apple Search Ads UI](https://searchads.apple.com), choose Sign In > Advanced and log in as an account administrator.
     
@@ -345,7 +345,7 @@ After accepting the credentials, the authorization server returns an access toke
 
 String
 
-Your `access_token` is a requirement to make calls to Apple Search Ads Campaign Management API endpoints. See [Call the Apple Search Ads API](/documentation/apple_search_ads/call_the_apple_search_ads_api).
+Your `access_token` is a requirement to make calls to Apple Search Ads Campaign Management API endpoints. See [Calling the Apple Search Ads API](/documentation/apple_search_ads/calling_the_apple_search_ads_api).
 
 Your `access_token` is valid for the number of seconds that `expires_in` specifies.
 
@@ -374,7 +374,7 @@ See Also
 
 [
 
-Call the Apple Search Ads API](/documentation/apple_search_ads/call_the_apple_search_ads_api)
+Calling the Apple Search Ads API](/documentation/apple_search_ads/calling_the_apple_search_ads_api)
 
 Pass your access token in the authorization header of HTTP requests.
 
