@@ -1,5 +1,5 @@
 *   [215 (품절)](javascript:void(0))
-*   [220](javascript:void(0))
+*   [220 (품절)](javascript:void(0))
 *   [225 (품절)](javascript:void(0))
 *   [230 (품절)](javascript:void(0))
 *   [235 (품절)](javascript:void(0))
