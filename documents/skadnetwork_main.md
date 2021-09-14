@@ -43,7 +43,7 @@ Ad networks must register with Apple, and developers must configure their apps t
 
 The following diagram describes the path of an install validation for a StoreKit-rendered ad. App A is the source app that displays an ad. App B is the advertised app that the user installs.
 
-![Diagram showing a user tapping an ad for app B inside of app A, then installing and launching app B, which triggers a conversion notification after app B calls one of two methods, and after the timer expires. The ad network receives the postback which it must verify.](https://docs-assets.developer.apple.com/published/f707b3297b/rendered2x-1590201126.png)
+![Diagram showing a user tapping an ad for app B inside of app A, then installing and launching app B, which triggers a conversion notification after app B calls one of two methods, and after the timer expires. The ad network receives the postback which it must verify.](https://docs-assets.developer.apple.com/published/e3e8f2b5fc/StoreKit-AdNetwork_overview@2x.png)
 
 When users tap an ad, advertisers display an ad with cryptographically signed parameters that identify the ad campaign. Starting in iOS 14.5, advertisers can choose to display a custom view-through ad or a StoreKit-rendered ad. If the user installs the advertised app within an attribution time-window, the device sends an install attribution postback to the ad network.
 
