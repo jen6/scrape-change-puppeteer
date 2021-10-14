@@ -8,6 +8,7 @@ A class that validates advertisement-driven app installations.
 Availability
 
 *   iOS 11.3+
+*   iPadOS 11.3+
 *   Mac Catalyst 13.0+
 
 Framework
