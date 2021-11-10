@@ -5,6 +5,10 @@ SKAdNetwork
 
 A class that validates advertisement-driven app installations.
 
+Language
+
+Swift[Objective-C](/documentation/storekit/skadnetwork?language=objc)
+
 Availability
 
 *   iOS 11.3+
