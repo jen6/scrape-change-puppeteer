@@ -259,7 +259,7 @@ The client credentials code grant authenticates with your credentials in exchang
     curl -X POST \
     -H 'Host: appleid.apple.com' \
     -H 'Content-Type: application/x-www-form-urlencoded' \
-    https://appleid.apple.com/auth/oauth2/token?grant_type=client_credentials&
+    'https://appleid.apple.com/auth/oauth2/token?grant_type=client_credentials&
     client_id=SEARCHADS.27478e71-3bb0-4588-998c-182e2b405577&client_secret=eyJ0
     eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.zI1NiIsImprdSI6Imh0dHBzOi8vYXV0aC5kZXYuYXB
     pLnJpY29oL3YxL2Rpc2NvdmVyeS9rZXlzIiwia2lkIjoiMmIyZTgyMTA2NzkxZGM4ZmFkNzgxNW
@@ -272,7 +272,7 @@ The client credentials code grant authenticates with your credentials in exchang
     FBiVDV9Th091QFEYrZETZ1IE1koAO14oj4kf8TCmhiG_CtJagvctvloW1wAdgMB1_Eubz9a8oim
     cODqL7_uTmA5jKFx3ez9uoqQrEKZ51g665jSI6NlyeLtj4LrxpI9jZ4zTx1yqqjQx0doYQjBPhOB
     06Z5bdiVyhJDRpE8ksRCC3kDPS2nsvDAal28sMgyeP8sPvfKvp5sa2UsH78WJmTzeZWcJfX2C2ba3
-    xwRMB5LaaVrQZlhj9xjum0MfDpIS1hJI6p5CHZ8w&scope=searchadsorg
+    xwRMB5LaaVrQZlhj9xjum0MfDpIS1hJI6p5CHZ8w&scope=searchadsorg'
 
 **Request header**
 
