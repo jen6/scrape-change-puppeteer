@@ -9,7 +9,7 @@ Availability
 
 *   iOS 11.3+
 *   iPadOS 11.3+
-*   Mac Catalyst 13.0+
+*   Mac Catalyst 13.1+
 
 Framework
 
@@ -44,7 +44,7 @@ Ad networks must register with Apple, and developers must configure their apps t
 
 The following diagram describes the path of an install validation for a StoreKit-rendered ad. App A is the source app that displays an ad. App B is the advertised app that the user installs.
 
-![Diagram showing a user tapping an ad for app B inside of app A, then installing and launching app B, which triggers a conversion notification after app B calls one of two methods, and after the timer expires. The ad network receives the postback which it must verify.](https://docs-assets.developer.apple.com/published/e3e8f2b5fc/StoreKit-AdNetwork_overview@2x.png)
+![A diagram showing a user tapping an ad for App B inside of App A, then installing and launching App B. App B calls the updatePostbackConversionValue method, which triggers a conversion notification and starts the timer. After the timer expires, the ad network receives the postback which it must verify.](https://docs-assets.developer.apple.com/published/3b67140452/rendered2x-1642033157.png)
 
 When users tap an ad, advertisers display an ad with cryptographically signed parameters that identify the ad campaign. Starting in iOS 14.5, advertisers can choose to display a custom view-through ad or a StoreKit-rendered ad. If the user installs the advertised app within an attribution time-window, the device sends an install attribution postback to the ad network.
 
@@ -187,13 +187,23 @@ Indicates that your app is no longer presenting a view-through ad to the user.
 
 ### Providing Conversion Information
 
+[`class func updatePostbackConversionValue(Int, completionHandler: ((Error?) -> Void)?)`](/documentation/storekit/skadnetwork/3919928-updatepostbackconversionvalue)
+
+Verifies the first launch of an advertised app and on subsequent calls, updates the conversion value or calls a completion hander if the update fails.
+
+Beta
+
 [`class func registerAppForAdNetworkAttribution()`](/documentation/storekit/skadnetwork/2943654-registerappforadnetworkattributi)
 
 Verifies the first launch of an app installed as a result of an ad.
 
+Deprecated
+
 [`class func updateConversionValue(Int)`](/documentation/storekit/skadnetwork/3566697-updateconversionvalue)
 
 Updates the conversion value and verifies the first launch of an app installed as a result of an ad.
+
+Deprecated
 
 ### Verifying Postbacks
 
