@@ -11,7 +11,7 @@ Availability
 *   iPadOS 11.3+
 *   Mac Catalyst 13.1+
 
-Framework
+Technology
 
 *   StoreKit
 

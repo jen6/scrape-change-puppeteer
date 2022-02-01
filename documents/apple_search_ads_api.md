@@ -5,7 +5,7 @@ Implementing OAuth for the Apple Search Ads API
 
 Manage secure access to Search Ads accounts.
 
-Framework
+Technology
 
 *   Apple Search Ads
 
