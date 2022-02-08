@@ -236,3 +236,9 @@ See Also
 [`class SKAdImpression`](/documentation/storekit/skadimpression)
 
 A class that defines an ad impression for a view-through ad.
+
+[`enum SKANError.Code`](/documentation/storekit/skanerror/code)Beta
+
+[`struct SKANError`](/documentation/storekit/skanerror)Beta
+
+[`let SKANErrorDomain: String`](/documentation/storekit/skanerrordomain)Beta
