@@ -237,8 +237,20 @@ See Also
 
 A class that defines an ad impression for a view-through ad.
 
-[`enum SKANError.Code`](/documentation/storekit/skanerror/code)Beta
+[`enum SKANError.Code`](/documentation/storekit/skanerror/code)
 
-[`struct SKANError`](/documentation/storekit/skanerror)Beta
+Constants that indicate the type of error for an ad network attribution operation.
 
-[`let SKANErrorDomain: String`](/documentation/storekit/skanerrordomain)Beta
+Beta
+
+[`struct SKANError`](/documentation/storekit/skanerror)
+
+An error that an ad network attribution operation returns.
+
+Beta
+
+[`let SKANErrorDomain: String`](/documentation/storekit/skanerrordomain)
+
+A string that identifies the SKAdNetwork error domain.
+
+Beta
