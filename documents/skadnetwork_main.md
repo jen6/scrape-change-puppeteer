@@ -191,8 +191,6 @@ Indicates that your app is no longer presenting a view-through ad to the user.
 
 Verifies the first launch of an advertised app and on subsequent calls, updates the conversion value or calls a completion hander if the update fails.
 
-Beta
-
 [`class func registerAppForAdNetworkAttribution()`](/documentation/storekit/skadnetwork/2943654-registerappforadnetworkattributi)
 
 Verifies the first launch of an app installed as a result of an ad.
@@ -241,16 +239,10 @@ A class that defines an ad impression for a view-through ad.
 
 Constants that indicate the type of error for an ad network attribution operation.
 
-Beta
-
 [`struct SKANError`](/documentation/storekit/skanerror)
 
 An error that an ad network attribution operation returns.
 
-Beta
-
 [`let SKANErrorDomain: String`](/documentation/storekit/skanerrordomain)
 
 A string that identifies the SKAdNetwork error domain.
-
-Beta
