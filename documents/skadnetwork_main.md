@@ -211,13 +211,19 @@ Verifying an Install-Validation Postback](/documentation/storekit/skadnetwork/ve
 
 Verify that a postback you receive after an ad conversion is cryptographically signed by Apple.
 
-### Testing Ad Attributions
+### Testing Ad Attributions and Postbacks
 
 [
 
 Testing Ad Attributions with a Downloaded Profile](/documentation/storekit/skadnetwork/testing_ad_attributions_with_a_downloaded_profile)
 
 Reduce the time window for ad attributions and inspect postbacks using a proxy during testing.
+
+[
+
+Testing and Validating Ad Impression Signatures and Postbacks for SKAdNetwork](/documentation/storekittest/testing_and_validating_ad_impression_signatures_and_postbacks_for_skadnetwork)
+
+Validate your ad impressions and test your postbacks by creating unit tests using the StoreKit Test framework.
 
 Relationships
 -------------
