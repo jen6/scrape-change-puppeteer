@@ -96,7 +96,7 @@ SKAdNetwork APIs are designed to maintain user privacy. Apps don’t need to use
 
 Note
 
-When you call APIs provided by `SKAdNetwork` from an App Clip’s code, these APIs have no effect, return empty strings, or return values that indicate unavailability. For more information about App Clips, see [Choosing the Right Functionality for Your App Clip](/documentation/app_clips/choosing_the_right_functionality_for_your_app_clip).
+When you call APIs provided by `SKAdNetwork` from an App Clip’s code, these APIs have no effect, return empty strings, or return values that indicate unavailability. For more information about App Clips, see [Choosing the right functionality for your App Clip](/documentation/app_clips/choosing_the_right_functionality_for_your_app_clip).
 
 Topics
 ------
@@ -235,7 +235,7 @@ Relationships
 See Also
 --------
 
-### Ad Network Attribution
+### Ad network attribution
 
 [`class SKAdImpression`](/documentation/storekit/skadimpression)
 
