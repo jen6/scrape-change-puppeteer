@@ -5,15 +5,6 @@ Implementing OAuth for the Apple Search Ads API
 
 Manage secure access to Search Ads accounts.
 
-Technology
-
-*   Apple Search Ads
-
-On This Page
-
-*   [Overview](/documentation/apple_search_ads/implementing_oauth_for_the_apple_search_ads_api#overview) 
-*   [See Also](/documentation/apple_search_ads/implementing_oauth_for_the_apple_search_ads_api#see-also) 
-
 Overview
 --------
 

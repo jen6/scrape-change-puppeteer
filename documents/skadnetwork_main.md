@@ -5,23 +5,7 @@ SKAdNetwork
 
 A class that validates advertisement-driven app installations.
 
-Availability
-
-*   iOS 11.3+
-*   iPadOS 11.3+
-*   Mac Catalyst 13.1+
-
-Technology
-
-*   StoreKit
-
-On This Page
-
-*   [Declaration](/documentation/storekit/skadnetwork#declaration) 
-*   [Overview](/documentation/storekit/skadnetwork#overview) 
-*   [Topics](/documentation/storekit/skadnetwork#topics) 
-*   [Relationships](/documentation/storekit/skadnetwork#relationships) 
-*   [See Also](/documentation/storekit/skadnetwork#see-also) 
+iOS 11.3+ iPadOS 11.3+ Mac Catalyst 13.1+
 
 Declaration
 -----------
